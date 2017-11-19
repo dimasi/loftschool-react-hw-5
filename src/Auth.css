@@ -1,0 +1,13 @@
+.Auth__form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Auth__form-message_error {
+  margin-top: 0;
+  color: #ff0000;
+}
+
+.Auth__form-row {
+  margin-bottom: 15px;
+}
