@@ -62,34 +62,12 @@ class App extends Component {
           </NavLink>
         </nav>
         <Switch>
-          <Route 
-            path="/" 
-            component={Home} 
-            exact 
-          />
-          <Route 
-            path="/public" 
-            component={Public} 
-          />
-          <Route 
-            path="/auth" 
-            component={Auth} 
-          />
-          {isAuthorized ? (
-            <Route 
-              path="/private" 
-              component={Private} 
-            />
-          ) : (
-            <Redirect 
-              from="/private" 
-              to="/auth" 
-            />
-          )}
-          <Redirect 
-            from="*" 
-            to="/" 
-          />
+          <Route path="/" component={Home} exact />
+          <Route path="/public" component={Public} />
+          <Route path="/auth" component={Auth} />
+          {isAuthorized && <Route path="/private" component={Private} />}
+          <Redirect from="/private" to="/auth" />
+          <Redirect from="*" to="/" />
         </Switch>
       </div>
     );
