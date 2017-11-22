@@ -1,3 +1,7 @@
 import React from 'react';
 
-export default () => <p>Home page</p>;
+export default () => (
+    <header className="App__page-header">
+        <h1 className="App__page-heading">Welcome to Home Page</h1>
+    </header>
+);
